@@ -33,7 +33,6 @@ module tt_um_zswertttyui_aes_unroll2 (
     reg  [4:0]   plaintext_count;
     reg  [3:0]   read_index;
     reg  [7:0]   uio_in_d;
-    wire _unused = &{1'b0, uio_in_d[7:4]};
     reg          aes_start;
     reg          aes_done_d;
 
@@ -149,5 +148,5 @@ module tt_um_zswertttyui_aes_unroll2 (
     end
 
     // Prevent unused input warnings.
-    wire _unused = &{ena, uio_in[7:4], 1'b0};
+    wire _unused = &{ena, uio_in[7:4], uio_in_d[7:4], 1'b0};
 endmodule
