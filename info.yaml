@@ -6,7 +6,7 @@ project:
   description: "AES-128 encryption accelerator using a partially unrolled 2-round architecture and a byte-serial Tiny Tapeout wrapper."
   language: "Verilog"
   clock_hz: 50000000
-  tiles: "12x2"
+  tiles: "8x2"
   top_module: "tt_um_zswertttyui_aes_unroll2"
   source_files:
     - "project.v"
